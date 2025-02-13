@@ -21,4 +21,4 @@ Este projeto consiste no desenvolvimento de um programa capaz de ler um arquivo 
 ## Resultados obtidos
 
 - somador_on_off.py – Código-fonte do programa.
-- entrada.txt – Arquivo de entrada contendo os dados para processamento.
+- text.txt – Arquivo de entrada contendo os dados para processamento.
