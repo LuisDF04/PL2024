@@ -1,60 +1,36 @@
-# def somador_on_off(texto):
-#     palavras = texto.split(" ")
-
-#     somaTotal = 0
-#     comportamento = True
-
-#     for palavra in palavras:
-
-#         # print(palavra)
-
-#         if palavra.lower() == "on":
-#             comportamento = True
+def somador_on_off(ficheiro):
+    try:
+        with open(ficheiro, 'r', encoding='utf-8') as text:
+            somaTotal = 0
+            comportamento = True
             
-#         elif palavra.lower() == "off":
-#             comportamento = False
-        
-#         elif palavra == "=":
-#             print(somaTotal)
-        
-#         elif palavra.isdigit() and comportamento:
-#             somaTotal += int(palavra)
-            
-# texto = "10 abc 20 On 5 off 30 = 15 On 10 = Off 50 ="
-# print(texto)
-# somador_on_off(texto)
+            for linea in text:
+                numero_atual = ""
+                posivel_comando = ""
+                
+                for i, caractere in enumerate(linea):
+                    if caractere.isdigit():
+                        numero_atual += caractere  # Construimos el número carácter por carácter
+                    else:
+                        if numero_atual:  # Si había un número acumulado, lo sumamos si está permitido
+                            if comportamento:
+                                somaTotal += int(numero_atual)
+                            numero_atual = ""  # Reiniciamos para leer el siguiente número
 
-def somador_on_off(texto):
-    somaTotal = 0
-    comportamento = True
-    possível_comando = False
-    numero_atual = ""
+                        if linea[i:i+2].lower() == "on":
+                            comportamento = True
+                            posivel_comando = ""
+                        elif linea[i:i+3].lower() == "off":
+                            comportamento = False
+                            posivel_comando = ""
+                        
+                        if caractere == "=":
+                            print(somaTotal)
+    except FileNotFoundError:
+        print(f"Erro: Não foi encontrado o ficheiro: '{ficheiro}'")
+    except Exception as e:
+        print(f"Erro: {e}")
 
-    for caractere in texto:
-        if caractere.isdigit():
-            #print(caractere)
-            numero_atual += caractere  # Construímos o número caractere por caractere
-        else:
-            if numero_atual:  # Se havia um número acumulado, somamos se permitido
-                if comportamento:
-                    #print(numero_atual)
-                    somaTotal += int(numero_atual)
-                numero_atual = ""  # Resetamos para ler o próximo número
-
-            if caractere.lower() == "o":  # Pode ser início de "on" ou "off"
-                if texto[texto.index(caractere):texto.index(caractere) + 2].lower() == "on":
-                    comportamento = True
-                possível_comando = True
-            elif caractere.lower() == "f":  # Pode ser início de "off"
-                if possível_comando and texto[texto.index(caractere):texto.index(caractere) + 2].lower() == "ff":
-                    comportamento = False
-                    #print("false")
-            elif caractere == "=":
-                print(somaTotal)
-
-# Exemplo de entrada sem espaços
-texto = "35offonOff=holkfkfa24off20=11"
-# texto = "10 abc 20 On 5 off 30 = 15 On 10 = Off 50 ="
-
-print("Texto de entrada:", texto)
-somador_on_off(texto)
+# Uso de la función
+document = "text.txt"  # Cambia esto con el nombre de tu text
+somador_on_off(document)

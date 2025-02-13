@@ -1,0 +1,2 @@
+10abc20On5off30=15On10=Off50=  7on3off  25=On40  10off5= 100On200= Off300 20On50off= 
+On 60 70 Off 80= 90on100off=On150 200off250=On 300=Off 400 500=
