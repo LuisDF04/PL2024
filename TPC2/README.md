@@ -1,4 +1,4 @@
-# TPC1: Análise de um dataset de obras musicais
+# TPC2: Análise de um dataset de obras musicais
 - Data de entregue: 2025-02-21
 - Nome: Luis Enrique Díaz De Freitas
 - Número de Aluno: A104000
