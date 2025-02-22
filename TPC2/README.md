@@ -16,7 +16,7 @@
 - Dicionário em que a cada período está a associada uma lista alfabética dos títulos das obras
 desse período.
 
-# Relatório: Como funciona o programa?
+# Como funciona o programa?
 
 ### Objetivo:
 Este programa foi desenvolvido para ler e processar um arquivo CSV contendo informações sobre obras musicais. Ele extrai dados sobre compositores, períodos de criação e nomes das obras, organiza essas informações e apresenta ao usuário por meio de um menu interativo.
