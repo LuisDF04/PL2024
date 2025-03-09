@@ -1,0 +1,62 @@
+[
+    {
+        "cod": "A23",
+        "nome": "água 0.5L",
+        "quant": 3,
+        "preco": 0.7
+    },
+    {
+        "cod": "A24",
+        "nome": "água 1.5L",
+        "quant": 5,
+        "preco": 1.5
+    },
+    {
+        "cod": "A25",
+        "nome": "água 5L",
+        "quant": 2,
+        "preco": 3.5
+    },
+    {
+        "cod": "R23",
+        "nome": "refrigerante 0.5L",
+        "quant": 6,
+        "preco": 1.5
+    },
+    {
+        "cod": "R24",
+        "nome": "refrigerante 1.5L",
+        "quant": 3,
+        "preco": 3.5
+    },
+    {
+        "cod": "R25",
+        "nome": "refrigerante 5L",
+        "quant": 1,
+        "preco": 5.5
+    },
+    {
+        "cod": "C23",
+        "nome": "cerveja 0.5L",
+        "quant": 4,
+        "preco": 1.5
+    },
+    {
+        "cod": "C24",
+        "nome": "cerveja 1.5L",
+        "quant": 2,
+        "preco": 3.5
+    },
+    {
+        "cod": "C25",
+        "nome": "cerveja 5L",
+        "quant": 1,
+        "preco": 5.5
+    },
+    {
+        "cod": "B12",
+        "nome": "CocaCola 0.5L",
+        "quant": 5,
+        "preco": 1.2
+    }
+]
