@@ -61,19 +61,16 @@ def carregar_stock(ficheiro):
         with open(ficheiro, 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
-        return []  # Se o ficheiro não existir, retorna uma lista vazia
+        return []
 
 def guardar_stock(ficheiro, stock):
     """Guarda o stock num ficheiro JSON."""
     with open(ficheiro, 'w', encoding='utf-8') as f:
         json.dump(stock, f, indent=4, ensure_ascii=False)
 
-# Nome do ficheiro JSON
 FICHEIRO_STOCK = "stock.json"
 
-# Carregar o stock ao iniciar o programa
 stock = carregar_stock(FICHEIRO_STOCK)
 stock = maqLigada(stock)
 
-# Guardar o stock atualizado ao sair
 guardar_stock(FICHEIRO_STOCK, stock)
