@@ -13,6 +13,7 @@ def rec_term(simb):
     else:
         parser_error(prox_simb)
 
+#(9-2)*(13-4)
 def factor():
     global prox_simb
     if prox_simb.type == 'NUM':
@@ -32,6 +33,7 @@ def factor():
         parser_error(prox_simb)
         return 0
 
+#(9-2)*(13-4)
 def term():
     print("Derivando por P4: term --> factor term'")
     valor = factor()
@@ -51,6 +53,7 @@ def term():
     print("Reconheci P4: term --> factor term'")
     return valor
 
+#(9-2)*(13-4)
 def expr():
     print("Derivando por P1: expr --> term expr'")
     valor = term()
@@ -84,3 +87,9 @@ def parse(data):
 # term    → factor term'
 # term'   → ('*' factor term') | ('/' factor term') | ε
 # factor  → NUM | '(' expr ')'
+
+# (9-2)*(13-4)
+
+# 2+3
+# 67-(2+3*4)
+# (9-2)*(13-4)
