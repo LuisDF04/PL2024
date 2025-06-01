@@ -206,11 +206,6 @@ end.
        ('atrib', 'potencia', ('binop', '*', 'potencia', '2'))])]),
    ('func', ('writeln', ['O valor inteiro correspondente e: ', 'valor']))])]
 ```
-
-## Considerações Finais
-
-A análise sintática implementada é capaz de reconhecer a estrutura sintática de programas escritos no subconjunto Pascal definido, tratando adequadamente as construções de controle e expressões. Eventuais extensões incluem suporte para mais tipos, tratamento de erros mais robusto e integração com análise semântica.
-
 ## Geração de Código (Máquina Virtual)
 
 A Máquina Virtual (VM) utilizada neste projeto é uma máquina de pilha (stack machine) projetada para executar instruções intermediárias geradas pelo compilador do subconjunto Pascal. Ela simula um ambiente de execução simples, manipulando variáveis, estruturas de controle e chamadas de função.
@@ -288,12 +283,3 @@ WRITELN
 STOP
 ```
 
-### Vantagens da VM
-
-- **Portabilidade:** O código intermediário pode ser executado em qualquer ambiente que implemente a VM.
-- **Simplicidade:** Facilita a depuração e o entendimento do processo de execução.
-- **Extensibilidade:** Novas instruções podem ser adicionadas para suportar mais recursos da linguagem.
-
-### Considerações Finais
-
-A VM é fundamental para separar a análise e geração de código da execução, permitindo que o compilador foque na tradução da linguagem fonte para instruções intermediárias, enquanto a VM gerencia a execução real do programa. Isso torna o projeto modular e facilita futuras expansões.
