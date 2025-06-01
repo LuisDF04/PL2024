@@ -229,7 +229,7 @@ A Máquina Virtual (VM) utilizada neste projeto é uma máquina de pilha (stack 
 
 ### Exemplo de Execução
 
-Ao compilar um programa Pascal, como somar os 5 numeros de um array, o compilador gera uma sequência de instruções para a VM. Por exemplo:
+Ao compilar um programa Pascal (como o exemplo 5 do enunciado do projeto) o compilador gera uma sequência de instruções para a VM. Por exemplo:
 
 ```plaintext
 PUSHI 0
